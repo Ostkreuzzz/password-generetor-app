@@ -1,6 +1,6 @@
-export enum StrengthColors {
+export enum StrengthColor {
   RED = 'bg-red',
   ORANGE = 'bg-orange',
   YELLOW = 'bg-yellow',
-  GREEN = 'bg-green',
+  GREEN = 'bg-neon-green',
 }

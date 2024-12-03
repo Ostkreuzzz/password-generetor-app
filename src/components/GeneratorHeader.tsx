@@ -3,12 +3,18 @@ import { IoMdCopy } from 'react-icons/io';
 import { useState } from 'react';
 import { cn } from '@utils/tailwindUtils';
 
-export function GeneratorHeader() {
-  const [password, setPassword] = useState('qwerty');
+interface Props {
+  password: string;
+}
 
+export function GeneratorHeader({ password }: Props) {
   const [isCopied, setIsCopied] = useState(false);
 
   async function handleCopy() {
+    if (!password) {
+      return;
+    }
+
     try {
       await navigator.clipboard.writeText(password);
       setIsCopied(true);
@@ -19,10 +25,17 @@ export function GeneratorHeader() {
   }
 
   return (
-    <div className='h-80 px-32 py-24 flex items-center  bg-gray-dark'>
+    <div className='flex h-80 items-center bg-gray-dark px-32  py-24 '>
       <div className='flex w-full items-center justify-between'>
-        <p className='text-4xl text-white'>{password}</p>
-        <div className='gap-16 flex items-center justify-between '>
+        <input
+          type='text'
+          className='w-auto bg-gray-dark text-4xl text-white '
+          disabled
+          size={password.length || 8}
+          value={password}
+          placeholder='P4$5W0rD!'
+        />
+        <div className='flex items-center justify-between gap-16 '>
           <span
             className={cn(
               'h-24 text-xl font-bold uppercase tracking-wide text-neon-green transition-opacity duration-300',

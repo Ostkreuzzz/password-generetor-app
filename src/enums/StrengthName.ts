@@ -1,5 +1,5 @@
 export enum StrengthName {
-  BAD = 'TOO WEAK!',
+  SUPER_WEAK = 'TOO WEAK!',
   WEAK = 'WEAK',
   MEDIUM = 'MEDIUM',
   STRONG = 'STRONG',
