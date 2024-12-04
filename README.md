@@ -21,7 +21,8 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/Ostkreuzzz/password-generetor-app/tree/develop/src)
-- Live Site URL: [Live](https://github.com/Ostkreuzzz/password-generetor-app/tree/develop/src)
+- Live Site URL: [Live](https://ostkreuzzz.github.io/password-generetor-app/)
+- Figma: [Figma](https://www.figma.com/design/0MCKihShpxhBTm4kFmrYDp/password-generator-app?node-id=0-230&t=R8NFbZ6uLMDJgYqy-1)
 
 ## My process
 
@@ -39,5 +40,5 @@ Users should be able to:
 ## Author
 
 - Github - [Ostkreuzzz](https://github.com/Ostkreuzzz)
-- LinkedIn - [Mykhailo Sulima](https://www.linkedin.com/in/mykhailo-sulima-a80648339/)
+- LinkedIn - [Mykhailo Sulima](https://www.linkedin.com/in/mykhailo-sulima)
 - Telegram - [@Ostkreuz](https://t.me/Ostkreuz)

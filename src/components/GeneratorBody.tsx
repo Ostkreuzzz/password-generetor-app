@@ -79,7 +79,7 @@ export function GeneratorBody({ onPassword }: Props) {
         <input type='range' min='5' max='15' value={passwordLength} className={styles.slider} onChange={handleChange} />
         <div className='flex flex-col justify-between gap-18'>
           {Checkboxes.map((checkbox) => (
-            <div className='flex justify-start gap-24'>
+            <div className='flex justify-start gap-24' key={checkbox.id}>
               <input type='checkbox' id={checkbox.id} className={styles.checkbox} onChange={handleCheckbox} />
               <label htmlFor={checkbox.id} className={styles.label}>
                 {checkbox.text}
@@ -104,7 +104,7 @@ export function GeneratorBody({ onPassword }: Props) {
 
         <button
           onClick={handleSubmit}
-          className='h-64 w-full items-center border-neon-green bg-neon-green 
+          className='h-64 w-full  items-center border-neon-green bg-neon-green 
               text-xl font-bold uppercase text-gray-dark transition-colors duration-300
               hover:border-2 hover:border-solid hover:bg-gray-dark hover:text-neon-green'
         >

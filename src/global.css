@@ -4,6 +4,7 @@
 
 body {
   background-color: #18171f;
+  box-sizing: border-box;
 }
 
 @font-face {
