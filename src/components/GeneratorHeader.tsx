@@ -1,14 +1,22 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import { IoMdCopy } from 'react-icons/io';
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useContext } from 'react';
+import { GlobalContext } from 'ContextProvider/GlobalContext';
+
 import { cn } from '@utils/tailwindUtils';
 
-interface Props {
-  password: string;
-}
-
-export function GeneratorHeader({ password }: Props) {
+export function GeneratorHeader() {
   const [isCopied, setIsCopied] = useState(false);
+  const placeholder = 'P4$5W0rD!';
+
+  const { password } = useContext(GlobalContext);
+
+  const handleInputSize = () => {
+    if (!password) {
+      return placeholder.length - 3;
+    }
+
+    return password.length - 3;
+  };
 
   const handleCopy = useCallback(() => {
     if (!password) return;
@@ -29,11 +37,11 @@ export function GeneratorHeader({ password }: Props) {
       <div className='flex w-full items-center justify-between'>
         <input
           type='text'
-          className='w-auto bg-gray-dark text-4xl text-white '
+          className='w-auto bg-gray-dark text-4xl text-white'
           disabled
-          size={password.length || 8}
+          size={handleInputSize()}
           value={password}
-          placeholder='P4$5W0rD!'
+          placeholder={placeholder}
         />
         <div className='flex items-center justify-between gap-16 '>
           <span

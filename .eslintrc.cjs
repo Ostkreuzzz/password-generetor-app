@@ -27,5 +27,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/require-default-props': 'off',
     'react/button-has-type': 'off',
+    'react/jsx-no-bind': 'off',
+    'react/function-component-definition': 'off',
   },
 };
